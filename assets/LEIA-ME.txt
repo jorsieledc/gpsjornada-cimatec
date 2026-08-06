@@ -1,0 +1,9 @@
+Coloque aqui o arquivo oficial da logo do CIMATEC com o nome exato:
+
+    logo-cimatec.png
+
+(pode ser .png ou você troca a extensão referenciada em index.html, na tag <img id="logoImg">, se preferir usar .svg)
+
+Assim que o arquivo estiver nesta pasta com esse nome, ele aparece automaticamente na barra lateral do dashboard — não precisa alterar nenhum código. Enquanto o arquivo não existir, o site usa um ícone de losango como placeholder.
+
+Dica: exporte a logo em fundo transparente e em tamanho quadrado (ex: 128x128px) para ficar bem enquadrada no ícone.
