@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CIMATEC | Jornada do Colaborador</title>
+<meta name="description" content="Dashboard de jornada, competências e metas do colaborador — demo interativa." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><polygon points=%2220,2 36,20 20,20%22 fill=%22%238b7ffc%22/><polygon points=%2220,2 20,20 4,20%22 fill=%22%235c4fe0%22/><polygon points=%224,20 20,20 20,38%22 fill=%22%233f34b8%22/><polygon points=%2220,20 36,20 20,38%22 fill=%22%236c5ce7%22/></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="brand" title="CIMATEC">
+      <div class="logo">
+        <img id="logoImg" src="assets/logo-cimatec.png" alt="CIMATEC"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><polygon points=%2220,2 36,20 20,20%22 fill=%22%238b7ffc%22/><polygon points=%2220,2 20,20 4,20%22 fill=%22%235c4fe0%22/><polygon points=%224,20 20,20 20,38%22 fill=%22%233f34b8%22/><polygon points=%2220,20 36,20 20,38%22 fill=%22%236c5ce7%22/></svg>'" />
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <button class="nav-item active" data-page="inicio"><span class="ico">🏠</span><span class="label">Início</span></button>
+      <button class="nav-item" data-page="jornada"><span class="ico">🧭</span><span class="label">Minha Jornada</span></button>
+      <button class="nav-item" data-page="competencias"><span class="ico">🎓</span><span class="label">Competências</span></button>
+      <button class="nav-item" data-page="experiencias"><span class="ico">🎒</span><span class="label">Experiências</span></button>
+      <button class="nav-item" data-page="metas"><span class="ico">✅</span><span class="label">METAS PA</span></button>
+      <button class="nav-item" data-page="reconhecimento"><span class="ico">⭐</span><span class="label">Reconhecimento</span></button>
+      <button class="nav-item" data-page="oportunidades"><span class="ico">👤</span><span class="label">Oportunidades</span></button>
+      <button class="nav-item" data-page="documentos"><span class="ico">📁</span><span class="label">Documentos</span></button>
+      <button class="nav-item" data-page="feedback"><span class="ico">🔍</span><span class="label">Feedback</span></button>
+    </nav>
+
+    <div class="tip-card">
+      <div class="rocket">🚀</div>
+      <h4>Dica do dia</h4>
+      <p id="dicaDia">Pequenos passos hoje constroem grandes conquistas amanhã!</p>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+
+    <div class="topbar">
+      <div>
+        <h1 id="greeting">Olá, Carolina! 👋</h1>
+        <p class="sub">Que bom ter você por aqui.</p>
+      </div>
+      <div class="topbar-right">
+        <div class="bell">🔔<span class="dot" id="notifCount">3</span></div>
+        <div class="user-box">
+          <div class="avatar" id="avatar">CA</div>
+          <div class="user-meta">
+            <strong id="userName">Carolina Andrade</strong>
+            <span id="userRole">Eng. de Automação</span>
+          </div>
+        </div>
+        <select id="employeeSelect"></select>
+      </div>
+    </div>
+
+    <!-- Controles de simulação (para apresentação) -->
+    <div class="sim-bar">
+      <button class="sim-btn" id="simulateBtn">🔄 Simular atualização</button>
+      <button class="sim-btn secondary" id="resetBtn">↩️ Restaurar dados originais</button>
+      <span class="sim-note">Dados fictícios — troque de colaborador ou clique em "Simular atualização" para ver o dashboard mudar em tempo real.</span>
+    </div>
+
+    <div id="pageContent"></div>
+
+  </main>
+</div>
+
+<div id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
